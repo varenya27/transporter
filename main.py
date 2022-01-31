@@ -2,7 +2,6 @@ import os
 from discord.ext import commands
 import random
 from keep_alive import keep_alive
-id=0
 bot = commands.Bot(command_prefix='tp ')
 
 c_id=937568599567130714 #put lambda channel id here
@@ -12,22 +11,6 @@ async def on_ready():
     print('{0.user}'.format(bot))
 
 
-# @bot.command(name= 'code')
-# async def code(ctx, c:str):
-
-#     print(c)
-#     channel=bot.get_channel(c_id)
-
-#     c=r''.join(c)
-#     if(c.startswith('```') ):
-#         code='id-'+ str(id)+'\n'+c
-#         # await ctx.reply(code)
-#         await channel.send(code)
-
-#     else:
-#         await ctx.reply('put proper codeblock pls')
-
-id+=1
 # @bot.event
 # async def on_message(message):
 
@@ -55,6 +38,8 @@ id+=1
 #         await channel.send('hellooooo')
 #       except:
 #         await message.channel.send('open dms pls')
+
+
 @bot.command()
 async def dm(ctx):
   await ctx.author.send('hellloooo')
